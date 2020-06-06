@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "name": "Denny",
+      "surname": "Banda",
+      "email": "email@domain.com",
+      "password": "default",
+      "role": "regular",
+      "id": 305
+    },
+    {
+      "name": "Elroy",
+      "surname": "Nyoni",
+      "email": "roy@domain.com",
+      "password": "ror12II",
+      "role": "regular",
+      "id": 306
+    },
+    {
+      "name": "Greece",
+      "surname": "Bismark",
+      "email": "email@domain.com",
+      "password": "default",
+      "role": "regular",
+      "id": 307
+    },
+    {
+      "name": "Meek",
+      "surname": "Mill",
+      "email": "email@domain.com",
+      "password": "default",
+      "role": "regular",
+      "id": 308
+    },
+    {
+      "name": "Tipson",
+      "surname": "Maleti",
+      "email": "tip@malete.com",
+      "password": "2222NNnn",
+      "role": "admin",
+      "id": 309
+    }
+  ]
+}

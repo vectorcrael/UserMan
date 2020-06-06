@@ -1,0 +1,59 @@
+<div class="container">
+    
+    <h2>Create User</h2>
+    <div class="row">
+        <div class="container col-6 ">
+        <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input id="firstName" type="text" formControlName="name" class="form-control" placeholder="First Name">
+                <div class="alert alert-danger" *ngIf="username.touched && username.invalid"> 
+                   <div *ngIf="username.errors.required">First Name is required.</div> 
+                   <div *ngIf="username.errors.minlength">First Name should be minimum {{username.errors.minlength.requiredLength}} characters.</div> 
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname</label>
+                <input  id="surname" type="text" formControlName="surname" class="form-control" placeholder="Surname" >
+                <div class="alert alert-danger" *ngIf="surname.touched && surname.invalid"> 
+                    <div *ngIf="surname.errors.required">Surname is required.</div> 
+                    <div *ngIf="surname.errors.minlength">Surname should be minimum {{surname.errors.minlength.requiredLength}} characters.</div> 
+                 </div>
+            </div>
+            <div class="form-group">
+                <label for="email" >Email</label>
+                <input  id="email" type="email" formControlName="email" class="form-control" placeholder="email@domain.com"  >
+                <div class="alert alert-danger" *ngIf="email.touched && email.invalid"> 
+                    <div *ngIf="email.errors.required">Email is required.</div> 
+                    <div *ngIf="email.errors.email">Invalid email format.</div> 
+                 </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" formControlName="password" class="form-control">
+                <div class="alert alert-danger" *ngIf="password.touched && password.invalid"> 
+                    <div *ngIf="password.errors.required">Password is required.</div> 
+                    <div *ngIf="password.errors.pattern">Password should be 6 to 32 characters,at least one digit 0-9;at least one lowercase letter and; at least one UPPERCASE letter. </div> 
+                 </div>
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" class="form-control" formControlName="role" >
+                <option value="none" selected disabled hidden>Select Role</option> 
+                <option value="admin">Administrator</option>
+                <option value="regular">Regular User</option>
+                </select>
+                <div class="alert alert-danger" *ngIf="role.touched && role.invalid"> 
+                    <div *ngIf="role.errors.required">role is required.</div> 
+                 </div>   
+            </div>
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        </div>
+        <div class="col-6"> 
+            <p>
+                The form to the here is used for capturing a new user into the system 
+        </p> </div>
+    </div>
+</div>
